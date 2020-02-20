@@ -1,0 +1,36 @@
+@use 'variables' as *;
+
+footer {
+    text-align: center;
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $grey;
+        text-decoration: none;
+    }
+
+    background-color: #000000;
+    padding: 50px;
+    .wrapper {
+        ul {
+            display: flex;
+            flex-direction: column;
+            li{
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:$medium) {
+    .wrapper {
+        ul {
+            li:last-child {
+                margin-left: 0;
+            }
+        }
+    }
+}

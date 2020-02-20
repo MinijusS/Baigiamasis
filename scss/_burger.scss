@@ -1,0 +1,42 @@
+@use 'variables' as *;
+
+.burger {
+    width: 2em;
+    height: auto;
+    position: relative;
+    .burger-line {
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        margin-top: 3px;
+        border-radius: 50px;
+        background-color: $white;
+        transform: translateY(-100%);
+        transition: 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045)
+    }
+}
+
+.burger {
+    .burger-line:nth-child(1) {
+        top: 0;
+    }
+    .burger-line:nth-child(2) {
+        top: 50%;
+    }
+    .burger-line:nth-child(3) {
+        top: 100%;
+    }
+}
+
+.burger:hover {
+    cursor: pointer;
+    .burger-line:nth-child(1) {
+        top: 100%;
+    }
+    .burger-line:nth-child(2) {
+        top: 100%;
+    }
+    .burger-line:nth-child(3) {
+        top: 100%;
+    }
+}

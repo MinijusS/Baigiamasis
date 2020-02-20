@@ -1,0 +1,88 @@
+@use 'variables' as *;
+@use 'burger';
+header {
+    position: sticky;
+    top: 0;
+    background-color: $black;
+    box-shadow: 0 0 10px 5px $black;
+    z-index: 1;
+
+}
+nav {
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left-nav{
+        display: flex;
+        align-items: center;
+        .logo {
+            height: 30px;
+            margin-right: 30px;
+        }
+    }
+    ul {
+        list-style-type: none;
+        display: none;
+        flex-wrap: nowrap;
+        li:not(:last-of-type) {
+            margin-right: 30px;
+        }
+    }
+    .right-nav {
+        display: flex;
+        .search {
+            margin-right: 20px;
+        }
+    
+        .right-text>* {
+            margin-right: 20px;
+        }
+        .right-text>*:nth-last-child(1) {
+            margin: 0;
+        }
+        .right-text>*:nth-last-child(2) {
+            margin: 0;
+        }
+        .right-text {
+            display: none;
+            align-items: center;
+        }
+        i {
+            color: $white;
+            transition: 0.3s;
+        }
+        i:hover {
+            color: $pink;
+            cursor: pointer;
+        }
+        .subscribe {
+            display: inline-block;
+            overflow: hidden;
+            padding-bottom: 3px;
+            color: $pink;
+            position: relative;
+        }
+        .subscribe::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            background-color: $pink;
+            width: 100%;
+            transition: 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        }
+
+        .subscribe:hover::after {
+            left:100%;
+        }
+        .profile-logo {
+            height: 20px;
+        }
+    }
+}

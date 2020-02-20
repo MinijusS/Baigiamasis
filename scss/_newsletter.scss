@@ -1,0 +1,40 @@
+@use 'variables' as *;
+
+.newsletter {
+    margin-top: 1em;
+    position: relative;
+    overflow: hidden;
+    iframe {
+        position: absolute;
+        top: 0;
+        min-width: 100%;
+        min-height: 800px;
+        z-index: -2;
+    }
+    form {
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        .form-inside {
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+        }
+        input {
+            color: $white;
+            font-size: 2em;
+            outline: none;
+            padding: 10px 0;
+            background: none;
+            border:none;
+            border-bottom: 3px solid $pink;
+        }
+    }
+}
+
+@media screen and (min-width: $medium) {
+    .newsletter {
+        form {
+            width: 40%;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+%fancy-underline {
+  // Linear gradient efektas gali būti pozicionuotas ir resize'intas
+  background-image: linear-gradient($white, $white);
+
+  // Pradinis size
+  background-size: 0 .1em;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition-duration: 0.2s;
+  transition-property: background-size;
+
+  &:hover {
+    // Hover'io size
+    background-size: 100% .1em;
+    cursor: pointer;
+  }
+}
+
+// Viršui aprašytą stilių gali turėti keletas klasių
+.underline {
+  @extend %fancy-underline;
+}
