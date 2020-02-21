@@ -1,0 +1,33 @@
+@use 'variables' as *;
+
+.bubble {
+    z-index: 1;
+    height: 10px;
+    width: 10px;
+    background-color: $white;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    animation: bubble 15s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes bubble {
+    0% {
+        top: 50%;
+        left: 10%;
+        transform: scale(1);
+    }
+    
+    50% {
+        top: 130%;
+        left: 90%;
+        transform: scale(1.6);
+    }
+
+    100% {
+        top: 50%;
+        left: 10%;
+        transform: scale(1);
+    }
+}

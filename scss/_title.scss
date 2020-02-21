@@ -1,0 +1,50 @@
+@use 'variables' as *;
+
+
+h1 {
+    text-transform: uppercase;
+    display: block;
+    position: fixed;
+    cursor: pointer;
+    bottom: 10px;
+    z-index: 10;
+    color: $white;
+    font-size: 0.8em;
+    padding: 10px 20px;
+    background-color: rgba($black, 0.5);
+    transition: 0.3s;
+    transition-property: color;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    margin-top: 3px;
+    height: 2px;
+    background-color: $white;
+    width: 100%;
+}
+h1:hover {
+    color: $pink;
+}
+
+@media screen and (min-width:1000px) {
+    h1 {
+        writing-mode: vertical-rl;
+        padding: 0;
+        background-color: transparent;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+
+    h1::after {
+        content: '';
+        display: block;
+        margin-right: 3px;
+        margin-top: 0;
+        height: 100%;
+        background-color: $white;
+        width: 2px;
+    }
+    
+}

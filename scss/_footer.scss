@@ -4,6 +4,7 @@ footer {
     text-align: center;
     a {
         color: $white;
+        font-size: 0.7em;
         text-decoration: none;
     }
     a:hover {
@@ -30,6 +31,21 @@ footer {
         ul {
             li:last-child {
                 margin-left: 0;
+            }
+        }
+    }
+
+    footer {
+        .wrapper {
+            ul {
+                flex-direction: row;
+                justify-content: space-between;
+                li {
+                    margin: 0;
+                }
+                li:not(:last-child) {
+                    margin-right: 20px;
+                }
             }
         }
     }

@@ -5,6 +5,8 @@
 @use 'stories';
 @use 'newsletter';
 @use 'footer';
+@use 'bubble';
+@use 'title';
 
 *, *::before, *::after {
     margin: 0;
@@ -21,10 +23,6 @@ body {
     margin: 0 10px;
 }
 
-.main {
-    margin-top: 100px;
-}
-
 h3 {
     color: $white;
     font-size: 3em;
@@ -38,7 +36,6 @@ a:hover {
     color: $white;
     margin-bottom: 10px;
 }
-
 
 .submit {
     cursor: pointer;
@@ -61,26 +58,6 @@ a:hover {
     .wrapper {
         margin: 0 auto;
     }
-    nav {
-        a:hover {
-            transition: 0.3s;
-            text-decoration: none;
-            color: $pink;
-        }
-        .right-nav {
-            .right-text {
-                display: block;
-            }
-        }
-        .left-nav {
-            ul {
-                display: flex;
-            }
-        }
-        .burger {
-            display: none;
-        }
-    }
 
     .posts {
         display: grid;
@@ -88,21 +65,7 @@ a:hover {
         grid-gap: 70px;
     }
 
-    footer {
-        margin-top: 50px;
-        .wrapper {
-            ul {
-                flex-direction: row;
-                justify-content: space-between;
-                li {
-                    margin: 0;
-                }
-                li:not(:last-child) {
-                    margin-right: 20px;
-                }
-            }
-        }
-    }
+    
 }
 
 @media screen and(max-width: 1200px) {

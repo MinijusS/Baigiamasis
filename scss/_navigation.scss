@@ -86,3 +86,26 @@ nav {
         }
     }
 }
+
+@media screen and (min-width: $big) {
+    nav {
+        a:hover {
+            transition: 0.3s;
+            text-decoration: none;
+            color: $pink;
+        }
+        .right-nav {
+            .right-text {
+                display: block;
+            }
+        }
+        .left-nav {
+            ul {
+                display: flex;
+            }
+        }
+        .burger {
+            display: none;
+        }
+    }
+}
